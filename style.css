@@ -1,0 +1,421 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+body {
+    background-image: linear-gradient(90deg, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+}
+
+.hide {
+    display: none!important;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.container {
+    margin: 0 3%;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+    height: 130px;
+    border: 2px solid hsl(217, 16%, 45%);
+    border-radius: 10px;
+    margin: 30px auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.logo {
+    height: 100px;
+    margin-right: auto;
+}
+
+.scoreboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f6f6f6;
+    height: 80px;
+    width: 140px;
+    border-radius: 7px;
+    padding-top: 3px;
+    padding-bottom: 17px;
+    line-height: 40px;
+} 
+
+.score-title {
+    color: hsl(229, 64%, 46%);
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+
+#score-value {
+    font-size: 60px;
+    color: hsl(229, 25%, 31%);
+    font-weight: 700;
+    height: 60px;
+}
+
+.choosing-stage {
+    background-image: url('./images/bg-triangle.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 310px;
+    margin: 10px auto;
+    width: 40%;
+    height: 500px;
+}
+
+.rules {
+    background: rgba(0, 0, 0, 0.521);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left:0; 
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rules-box {
+    background: white;
+    width: 30%;
+    height: 60%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    padding-bottom: 40px;
+}
+
+.rule-component {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    width: 85%;
+    margin-bottom: 13%;
+    margin-top: 5%;
+}
+
+.rule-component h3{    
+    font-size: 35px;
+    color: hsl(214, 47%, 23%);
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-right: auto;
+}
+
+.cross {
+    background: transparent;
+    border: none;
+}
+
+.option-btn {
+    border-radius: 50%;
+    height: 180px;
+    width: 180px;
+    text-align: center;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: 1px solid rgb(49, 48, 48);
+}
+
+.option-btn:hover {
+    transform: scale(0.9);
+}
+
+.option-btn div {
+    background-color: #f6f6f6;
+    height: 128px;
+    width: 135px;
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 7px solid rgb(199, 199, 199);
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+}
+
+.option-btn div img {
+    height: 70px;
+}
+
+.paper {
+    margin-top: 5%;
+    margin-left: 5%;
+    background-image: linear-gradient(90deg, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+    border-bottom: 10px solid hsl(230, 48%, 42%);
+}
+
+.scissors {
+    margin-top: 5%;
+    margin-left: 18%;
+    background-image: linear-gradient(90deg, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+    border-bottom: 10px solid hsl(39, 98%, 36%);
+}
+
+.rock {
+    margin-top: 14%;
+    margin-left: 32%;
+    background-image: linear-gradient(90deg, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+    border-bottom: 10px solid hsl(349, 68%, 39%);
+}
+
+.rules-btn {
+    background: transparent;
+    border: 2px solid hsl(210, 6%, 75%);
+    border-radius: 5px;
+    height: 45px;
+    width: 120px;
+    font-size: 20px;
+    color: hsl(215, 21%, 84%);
+    font-weight: lighter;
+    letter-spacing: 4px;
+    margin-left: 90%;
+    margin-bottom: 5%;
+}
+
+.game-stage {
+    display: flex;
+    gap: 300px;
+    justify-content: center;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.game-stage .option-btn:hover {
+    transform: none;
+    cursor: context-menu;
+}
+
+.user h2, .house h2 {
+    font-size: 25px;
+    padding-bottom: 50px;
+    color: #f6f6f6;
+    position: static;
+    top: 0px;
+}
+
+.user .option-btn, .house .option-btn {
+    height: 280px;
+    width: 280px;
+    margin-left: 0;
+    margin-top: 0;
+}
+
+.user .option-btn div, .house .option-btn div {
+    height: 200px;
+    width: 210px;
+}
+
+.verdict {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.verdict h3 {
+    color: #f6f6f6;
+    font-size: 60px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.play-again {
+    background: #f6f6f6;
+    font-size: 18px;
+    height: 50px;
+    width: 200px;
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 7px;
+}
+
+.background-circle {
+    background: rgba(0, 0, 0, 0.151);
+    height: 230px;
+    width: 230px;
+    border-radius: 50%;
+}
+
+.winner {
+    box-shadow: 0 0 0 45px rgba(255, 255, 255, 0.048), 0 0 0 90px rgba(255, 255, 255, 0.034), 0 0 0 140px rgba(255, 255, 255, 0.014);
+}
+
+
+@media (max-width: 375px) {
+    body {
+        background-image: linear-gradient(180deg, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 80%;
+        height: 110px;
+        border-radius: 7px;
+    }
+
+    .logo {
+        height: 75%;
+    }
+
+    .scoreboard {
+        height: 60%;
+        width: 34%;
+        border-radius: 5px;
+    } 
+
+    .score-title {
+        font-size: 14px;
+        margin-bottom: -10px;
+        font-weight: bold;
+    }
+    
+    #score-value {
+        font-size: 40px;
+    }
+
+    .choosing-stage {
+        background-size: 70%; 
+        margin: 70px auto; 
+        width: 95%;
+        height: 380px;
+        margin-bottom: 30px;
+    }
+
+    .option-btn {
+        height: 120px;
+        width: 120px;
+    }
+
+    .option-btn div {
+        height: 78%;
+        width: 80%;
+        border-top: 5px solid rgb(199, 199, 199);
+    }
+
+    .option-btn div img {
+        height: 55px;
+    }
+
+    .paper {
+        border-bottom: 6px solid hsl(230, 48%, 42%);
+    }
+
+    .scissors {
+        border-bottom: 6px solid hsl(39, 98%, 36%);
+    }
+
+    .rock {
+        border-bottom: 6px solid hsl(349, 68%, 39%);
+    }
+
+    .rules-btn {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    .rules-box { 
+        padding-top: 35%;
+        width: 100%;
+        height: 100%;
+    }
+
+    .rule-component h3 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .desktop-cross {
+        display: none;
+    }
+
+    .mobile-cross {
+        display: block;
+    }
+
+    .rules-box img {
+        margin-bottom: 20vh;
+    }
+
+    .game-stage {
+        margin-top: 120px;
+        margin-bottom: 90px;
+        display: flex;
+        gap: 5%;
+    }
+
+    .user, .house {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        flex-direction: column-reverse;
+        width: 60%;
+    }
+
+    .user h2, .house h2 {
+        padding-top: 40px;
+        font-size: 15px;
+        font-weight: 600;
+        text-align: center;
+        letter-spacing: 2px;
+    }
+
+    .house {
+        margin-right: 2%;
+    }
+
+    .house h2 {
+        width: 150px;
+    }
+
+    .user .option-btn, .house .option-btn {
+        height: 100px;
+        width: 100px;
+    }
+
+    .user .option-btn div, .house .option-btn div, .background-circle {
+        height: 73px;
+        width: 80px;
+    }
+
+    .background-circle {
+        margin-left: auto;
+        margin-right: 30%;
+    }
+
+    .background-circle button {
+        margin-bottom: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .house {
+        justify-content: space-between;
+    }
+
+    .verdict {
+        margin-left: 15%;
+    }
+}
+
+

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Rock, Paper, Scissors</title>
+</head>
+<body id = "body">
+  <div class="container">
+    <header>
+      <img src="./images/logo.svg" alt="logo" class="logo">
+
+      <div class="scoreboard">
+        <span class="score-title">SCORE</span>
+        <span id = "score-value">0</span>
+      </div>
+    </header>
+
+    <div class="choosing-stage" id="step1">
+      <button class="option-btn paper" id="paper-btn" onclick="nextStage(this)">
+        <div>
+          <img src="./images/icon-paper.svg" alt="hand icon">
+        </div>
+      </button>
+
+      <button class="option-btn scissors" id="scissors-btn" onclick="nextStage(this)">
+        <div>
+          <img src="./images/icon-scissors.svg" alt="fingers icon">
+        </div>
+      </button>
+
+      <button class="option-btn rock" id="rock-btn" onclick="nextStage(this)">
+        <div>
+          <img src="./images/icon-rock.svg" alt="fist icon">
+        </div>
+      </button>
+    </div>
+
+    <div class="hide game-stage" id="step2">
+      <div class="user">
+        <h2>YOU PICKED</h2>
+
+        <button class="option-btn paper" id="user-btn">
+          <div id="user-move"><img src="./images/icon-paper.svg" alt="hand icon"></div>
+        </button>
+      </div>
+
+      <div class="hide verdict" id="display-result">
+        <h3 id="result"></h3>
+        <button class="play-again" id="play-again-btn">PLAY AGAIN</button>
+      </div>
+
+      <div class="house">
+        <h2>THE HOUSE PICKED</h2>
+        
+        <div class="background-circle" id="bgCircle">
+          <button class="option-btn paper" id="house-btn">
+            <div id="house-move"><img src="./images/icon-paper.svg" alt="hand icon"></div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <button class="rules-btn" id ="rules-btn">RULES</button>
+  </div>
+
+  <div class="hide rules" id="rules-box">
+    <div class="rules-box">
+      <div class="rule-component">
+        <h3>RULES</h3>
+        <button class="cross desktop-cross" id = "cross1">
+          <img src="./images/icon-close.svg" alt="cross button">
+        </button>
+      </div>
+      <img src="./images/image-rules.svg" alt="rules">
+      <button class="cross mobile-cross" id = "cross2">
+        <img src="./images/icon-close.svg" alt="cross button">
+      </button>
+    </div> 
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
