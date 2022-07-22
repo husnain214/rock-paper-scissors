@@ -192,6 +192,13 @@ header {
     margin-bottom: 5%;
 }
 
+.rules-btn:hover {
+    background: hsl(215, 21%, 84%);
+    color: hsl(214, 47%, 23%);
+    border-color: hsl(214, 47%, 23%);
+    transition-duration: 200ms;
+}
+
 .game-stage {
     display: flex;
     gap: 300px;
@@ -415,6 +422,10 @@ header {
 
     .verdict {
         margin-left: 15%;
+    }
+
+    html,body{
+        overflow: hidden;
     }
 }
 
