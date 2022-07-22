@@ -31,7 +31,6 @@ let houseChoice = -1
 let userChoice = -1
 let sound = ""
 
-
 const options = [{"name": "paper", "color": "hsl(230, 89%, 62%)"},
                 {"name": "rock", "color": "hsl(349, 70%, 56%)"},
                 {"name": "scissors", "color": "hsl(39, 89%, 49%)"}
@@ -94,10 +93,8 @@ function houseMove () {
 function disappear () {
     return new Promise ((resolve, reject) => {
         setTimeout(() => {
-            house.removeChild(house.firstChild)
-            user.removeChild(user.firstChild)
-            gameStage.style.display = "none" 
-            
+            gameStage.style.marginRight = "5%"
+
             displayResult.classList.remove("hide")
 
             gameStage.style.gap = "140px"
@@ -145,19 +142,20 @@ function nextStage (userButton) {
 async function startGame () {  
     await houseMove()
 
-    gameStage.style.marginRight = "5%"
-
     if (window.innerWidth <= 375) {
-        await disappear ()
+        disappear()
+    } 
+    else {
+        gameStage.style.marginRight = "5%"
+
+        displayResult.classList.remove("hide")
+
+        gameStage.style.gap = "140px"
+
+        gameResult.textContent = verdict(options[userChoice].name, options[houseChoice].name)
+
+        playBtn.classList.remove("hide")
     }
-
-    displayResult.classList.remove("hide")
-
-    gameStage.style.gap = "140px"
-
-    gameResult.textContent = verdict(options[userChoice].name, options[houseChoice].name)
-
-    playBtn.classList.remove("hide")
 }
 
 function verdict (user, house) {
@@ -214,9 +212,7 @@ playBtn.addEventListener ("click", ()=> {
     playSound ("start")
 })
 
-playSound ("start")
-
-
+playSound("start")
 
 
 
